@@ -1,0 +1,25 @@
+{
+  "name": "selenium-senai-testes-sistema",
+  "version": "1.0.0",
+  "description": "Projeto de testes automatizados com Selenium WebDriver para o sistema Reserva de Notebooks do SENAI.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha \"test/specs/**/*.test.js\" --timeout 30000",
+    "test:visible": "cross-env HEADLESS=false mocha \"test/specs/**/*.test.js\" --timeout 30000",    "test:home": "mocha \"test/specs/home.test.js\" --timeout 30000",
+    "test:professores": "mocha \"test/specs/professores.test.js\" --timeout 30000"
+  },
+  "keywords": [
+    "selenium",
+    "webdriver",
+    "javascript",
+    "senai",
+    "testes"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "cross-env": "^10.1.0",
+    "mocha": "^10.8.2",
+    "selenium-webdriver": "^4.35.0"
+  }
+}
