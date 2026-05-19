@@ -1,6 +1,6 @@
 # Selenium WebDriver - SENAI Testes Sistema
 
-Projeto para ensinar testes automatizados com **Selenium WebDriver + JavaScript + Chrome**.
+Projeto de testes automatizados com **Selenium WebDriver + JavaScript + Chrome** para o sistema Reserva de Notebooks do SENAI.
 
 Sistema testado:
 
@@ -47,10 +47,14 @@ Rodar com o Chrome visível:
 npm run test:visible
 ```
 
-Rodar apenas o teste inicial:
+Rodar suites específicas:
 
 ```bash
 npm run test:home
+npm run test:professores
+npm run test:carrinhos
+npm run test:reservas
+npm run test:api-docs
 ```
 
 ## 4. Estrutura
@@ -60,13 +64,22 @@ test/
   helpers/
     driver.js       # configura o Chrome
     resetApi.js     # restaura os dados antes dos testes
-    ui.js           # funções auxiliares para procurar elementos
+    ui.js           # funções auxiliares para interagir com a UI
   specs/
+    api-docs.test.js
+    carrinhos.test.js
     home.test.js
     professores.test.js
+    reservas.test.js
 ```
 
-## 5. Observação para aula
+## 5. Testes iniciais
+
+- Cada arquivo de teste possui um caso inicial pronto.
+- Os demais fluxos ficam como exercícios para os alunos.
+- Helpers de UI já incluem funções úteis para cadastro, modal e select.
+
+## 6. Observação para aula
 
 Os testes usam seletores por texto e CSS genéricos para facilitar a didática. Em projetos reais, o ideal é adicionar atributos próprios para teste no HTML, por exemplo:
 
@@ -79,11 +92,3 @@ E no Selenium:
 ```js
 await driver.findElement(By.css('[data-testid="btn-salvar-professor"]')).click();
 ```
-
-## 6. Exercícios sugeridos
-
-1. Criar teste para acessar a tela de notebooks.
-2. Criar teste para cadastrar um notebook.
-3. Criar teste para cadastrar uma reserva.
-4. Criar teste para validar mensagem de erro em campos obrigatórios.
-5. Criar teste para validar duplicidade de professor.

@@ -5,8 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha \"test/specs/**/*.test.js\" --timeout 30000",
-    "test:visible": "cross-env HEADLESS=false mocha \"test/specs/**/*.test.js\" --timeout 30000",    "test:home": "mocha \"test/specs/home.test.js\" --timeout 30000",
-    "test:professores": "mocha \"test/specs/professores.test.js\" --timeout 30000"
+    "test:visible": "cross-env HEADLESS=false mocha \"test/specs/**/*.test.js\" --timeout 30000",
+    "test:home": "mocha \"test/specs/home.test.js\" --timeout 30000",
+    "test:professores": "mocha \"test/specs/professores.test.js\" --timeout 30000",
+    "test:carrinhos": "mocha \"test/specs/carrinhos.test.js\" --timeout 30000",
+    "test:reservas": "mocha \"test/specs/reservas.test.js\" --timeout 30000",
+    "test:api-docs": "mocha \"test/specs/api-docs.test.js\" --timeout 30000"
   },
   "keywords": [
     "selenium",

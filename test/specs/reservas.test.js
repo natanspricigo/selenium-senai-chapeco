@@ -8,7 +8,7 @@ const {
 
 const BASE_URL = process.env.BASE_URL || 'https://senai-testes-sistema.onrender.com/';
 
-describe('Professores', function () {
+describe('Reservas', function () {
   let driver;
 
   beforeEach(async function () {
@@ -24,8 +24,10 @@ describe('Professores', function () {
     }
   });
 
-  it('deve acessar a area de professores', async function () {
-    await clickByText(driver, 'Professores');
-    await findByText(driver, 'Professor');
+  it('deve acessar a area de reservas', async function () {
+    await clickByText(driver, 'Reservas');
+
+    await findByText(driver, '+ Nova Reserva');
+    await findByText(driver, 'AGENDADA');
   });
 });
